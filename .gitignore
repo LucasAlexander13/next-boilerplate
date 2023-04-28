@@ -1,0 +1,40 @@
+## editors
+/.idea
+
+## system files
+.DS_Store
+
+## package
+/node_modules
+/npm-debug.log
+
+## temp folders
+/.tmp
+
+## build
+/dist
+/lib
+
+## next
+/.next
+next-env.d.ts
+
+## storybook
+storybook.*
+/storybook-static
+
+## Log files
+*.log
+
+## Applications
+*.app
+*.exe
+*.war
+
+## Large media files
+*.mp4
+*.tiff
+*.avi
+*.flv
+*.mov
+*.wmv

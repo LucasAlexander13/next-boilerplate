@@ -1,0 +1,255 @@
+{
+	"name": "next-boilerplate",
+	"version": "0.1.0",
+	"main": "index.tsx",
+	"author": "Lucas Alexander",
+	"license": "UNLICENSED",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"turbo": "next dev --turbo",
+		"start": "next start",
+		"build": "next build",
+		"export": "next build && next start",
+		"lint": "eslint ./source",
+		"lint:fix": "eslint ./source --fix",
+		"lint:debug": "eslint ./source --debug",
+		"clean": "rm -rf node_modules && pnpm install",
+		"stories": "concurrently 'pnpm:watch:*'",
+		"watch:storybook": "storybook dev -p 6006",
+		"watch:tailwind": "pnpx tailwindcss -i ./public/styles/tailwind.css -o ./public/styles/output.css --watch"
+	},
+	"engines": {
+		"node": ">=18.13.0"
+	},
+	"dependencies": {
+		"@radix-ui/react-accessible-icon": "^1.0.2",
+		"@radix-ui/react-accordion": "^1.1.1",
+		"@radix-ui/react-alert-dialog": "^1.0.3",
+		"@radix-ui/react-aspect-ratio": "^1.0.2",
+		"@radix-ui/react-avatar": "^1.0.2",
+		"@radix-ui/react-checkbox": "^1.0.3",
+		"@radix-ui/react-collapsible": "^1.0.2",
+		"@radix-ui/react-context-menu": "^2.1.3",
+		"@radix-ui/react-dialog": "^1.0.3",
+		"@radix-ui/react-dropdown-menu": "^2.0.4",
+		"@radix-ui/react-form": "^0.0.2",
+		"@radix-ui/react-hover-card": "^1.0.5",
+		"@radix-ui/react-icons": "^1.3.0",
+		"@radix-ui/react-label": "^2.0.1",
+		"@radix-ui/react-menubar": "^1.0.2",
+		"@radix-ui/react-navigation-menu": "^1.1.2",
+		"@radix-ui/react-popover": "^1.0.5",
+		"@radix-ui/react-portal": "^1.0.2",
+		"@radix-ui/react-progress": "^1.0.2",
+		"@radix-ui/react-radio-group": "^1.1.2",
+		"@radix-ui/react-scroll-area": "^1.0.3",
+		"@radix-ui/react-select": "^1.2.1",
+		"@radix-ui/react-separator": "^1.0.2",
+		"@radix-ui/react-slider": "^1.1.1",
+		"@radix-ui/react-slot": "^1.0.1",
+		"@radix-ui/react-switch": "^1.0.2",
+		"@radix-ui/react-tabs": "^1.0.3",
+		"@radix-ui/react-toast": "^1.1.3",
+		"@radix-ui/react-toggle": "^1.0.2",
+		"@radix-ui/react-toggle-group": "^1.0.3",
+		"@radix-ui/react-toolbar": "^1.0.3",
+		"@radix-ui/react-tooltip": "^1.0.5",
+		"@radix-ui/react-visually-hidden": "^1.0.2",
+		"daisyui": "^2.51.5",
+		"next": "13.3.0",
+		"react": "18.2.0",
+		"react-dom": "18.2.0"
+	},
+	"devDependencies": {
+		"@storybook/addon-essentials": "^7.0.7",
+		"@storybook/addon-interactions": "^7.0.7",
+		"@storybook/addon-links": "^7.0.7",
+		"@storybook/addon-mdx-gfm": "7.0.7",
+		"@storybook/blocks": "^7.0.7",
+		"@storybook/nextjs": "^7.0.7",
+		"@storybook/react": "^7.0.7",
+		"@storybook/testing-library": "^0.0.14-next.2",
+		"@types/node": "18.11.18",
+		"@types/react": "18.0.26",
+		"@types/react-dom": "18.0.10",
+		"@typescript-eslint/eslint-plugin": "5.48.1",
+		"@typescript-eslint/parser": "5.48.1",
+		"autoprefixer": "10.4.14",
+		"babel-loader": "8.3.0",
+		"class-variance-authority": "^0.5.2",
+		"concurrently": "7.6.0",
+		"eslint": "8.38.0",
+		"eslint-config-next": "13.3.0",
+		"eslint-plugin-react": "7.32.0",
+		"postcss": "8.4.21",
+		"storybook": "^7.0.7",
+		"tailwindcss": "3.3.1",
+		"typescript": "5.0.4"
+	},
+	"eslintConfig": {
+		"root": true,
+		"env": {
+			"browser": true,
+			"es2021": true
+		},
+		"extends": [
+			"eslint:recommended",
+			"next/core-web-vitals",
+			"plugin:react/recommended",
+			"plugin:react/jsx-runtime",
+			"plugin:@typescript-eslint/recommended"
+		],
+		"overrides": [],
+		"parser": "@typescript-eslint/parser",
+		"parserOptions": {
+			"ecmaVersion": "latest",
+			"sourceType": "module"
+		},
+		"plugins": [
+			"react",
+			"@typescript-eslint"
+		],
+		"rules": {
+			"react/jsx-uses-react": "off",
+			"react/react-in-jsx-scope": "off",
+			"indent": [
+				"error",
+				"tab"
+			],
+			"linebreak-style": [
+				"error",
+				"windows"
+			],
+			"quotes": [
+				"error",
+				"single"
+			],
+			"semi": [
+				"error",
+				"always"
+			],
+			"prefer-const": "error",
+			"no-const-assign": "error",
+			"no-var": "error",
+			"no-unused-vars": "error",
+			"one-var": [
+				"error",
+				"never"
+			],
+			"no-multi-assign": "error",
+			"no-plusplus": [
+				"error",
+				{
+					"allowForLoopAfterthoughts": true
+				}
+			],
+			"no-new-object": "error",
+			"object-shorthand": "error",
+			"quote-props": [
+				"error",
+				"consistent-as-needed"
+			],
+			"no-prototype-builtins": "error",
+			"dot-notation": "error",
+			"array-callback-return": [
+				"error",
+				{
+					"allowImplicit": true,
+					"checkForEach": true
+				}
+			],
+			"prefer-template": "error",
+			"template-curly-spacing": [
+				"error",
+				"never"
+			],
+			"no-eval": "error",
+			"no-useless-escape": "error",
+			"default-param-last": "error",
+			"no-new-func": "error",
+			"space-before-blocks": [
+				"error",
+				"always"
+			],
+			"space-before-function-paren": [
+				"error",
+				{
+					"anonymous": "always",
+					"named": "never",
+					"asyncArrow": "always"
+				}
+			],
+			"no-param-reassign": "error",
+			"prefer-spread": "error",
+			"arrow-spacing": "error",
+			"arrow-parens": "error",
+			"no-confusing-arrow": [
+				"error",
+				{
+					"allowParens": false
+				}
+			],
+			"implicit-arrow-linebreak": "error",
+			"no-duplicate-imports": "error",
+			"object-curly-newline": [
+				"error",
+				{
+					"multiline": true
+				}
+			],
+			"eqeqeq": "error",
+			"no-case-declarations": "error",
+			"no-unneeded-ternary": "error",
+			"no-mixed-operators": "error",
+			"space-infix-ops": "error",
+			"nonblock-statement-body-position": "error",
+			"brace-style": "error",
+			"no-else-return": "error",
+			"spaced-comment": "error",
+			"eol-last": "error",
+			"newline-per-chained-call": "error",
+			"no-whitespace-before-property": "error",
+			"padded-blocks": [
+				"error",
+				"never"
+			],
+			"no-multiple-empty-lines": "error",
+			"space-in-parens": "error",
+			"array-bracket-spacing": "error",
+			"object-curly-spacing": [
+				"error",
+				"always"
+			],
+			"comma-spacing": "error",
+			"computed-property-spacing": "error",
+			"func-call-spacing": "error",
+			"key-spacing": "error",
+			"no-trailing-spaces": "error",
+			"comma-style": "error",
+			"comma-dangle": [
+				"error",
+				"always-multiline"
+			],
+			"no-new-wrappers": "error",
+			"camelcase": "error",
+			"no-underscore-dangle": "error",
+			"@typescript-eslint/no-namespace": "off",
+			"@typescript-eslint/no-inferrable-types": "off",
+			"@typescript-eslint/no-explicit-any": "off",
+			"@typescript-eslint/naming-convention": [
+				"error",
+				{
+					"selector": "interface",
+					"format": [
+						"PascalCase"
+					],
+					"custom": {
+						"regex": "^I[A-Z]",
+						"match": true
+					}
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,19 @@
+{
+	/**
+	 * Cada snippet possui um scope (linguagem em que pode ser utilizado), prefix (identificador do snippet) e
+	 * body (código que será inserido ao utilizar o snippet). Para utilizar o snippet, basta inserir seu prefix
+	 * em um arquivo válido presente no scope. É possível alterar as propriedades marcadas com ${n:placeholder}
+	 * dentro do body durante a inclusão do snippet, apertando tab para percorrer as propriedades e realizar
+	 * a edição. Por padrão as propriedades são substituidas pelo placeholder vinculado à propriedade.
+	 *
+	 * exp: ${n:Placeholder} - onde n representa o índice da propriedade (utilizado para percorrer as propriedades)
+	 * e Placeholder representa o valor padrâo que substituirá a propriedade na inclusão do snippet.
+	 */
+	"logThis": {
+		"scope": "typescript, typescriptreact",
+		"prefix": "logthis",
+		"body": [
+			"console.log('${1:this}: ', ${1:this});"
+		]
+	},
+}

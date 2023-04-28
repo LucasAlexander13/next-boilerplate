@@ -1,0 +1,99 @@
+{
+	"ts-node": {
+		"compilerOptions": {
+			"module": "commonjs"
+		}
+	},
+	"compilerOptions": {
+		"target": "es2017",
+		"module": "esnext",
+		"outDir": "lib",
+		"baseUrl": ".",
+		"moduleResolution": "node",
+		"resolveJsonModule": true,
+		"lib": [
+			"es2017",
+			"dom",
+			"dom.iterable",
+			"esnext"
+		],
+		"noEmitOnError": true,
+		"noImplicitAny": true,
+		"experimentalDecorators": true,
+		"allowSyntheticDefaultImports": true,
+		"allowJs": false,
+		"skipLibCheck": true,
+		"forceConsistentCasingInFileNames": true,
+		"noEmit": true,
+		"incremental": true,
+		"esModuleInterop": true,
+		"isolatedModules": true,
+		"jsx": "preserve",
+		"strict": true,
+		"paths": {
+			"@actions/*": [
+				"./global/actions/*"
+			],
+			"@reducer/*": [
+				"./global/reducer/*"
+			],
+			"@selector/*": [
+				"./global/selector/*"
+			],
+			"@storage/*": [
+				"./global/storage/*"
+			],
+			"@pages/*": [
+				"./pages/*"
+			],
+			"@assets/*": [
+				"./public/assets/*"
+			],
+			"@scripts/*": [
+				"./public/scripts/*"
+			],
+			"@styles/*": [
+				"./public/styles/*"
+			],
+			"@apis/*": [
+				"./server/apis/*"
+			],
+			"@mocks/*": [
+				"./server/mocks/*"
+			],
+			"@models/*": [
+				"./server/models/*"
+			],
+			"@static/*": [
+				"./server/static/*"
+			],
+			"@components/*": [
+				"./source/components/*"
+			],
+			"@decorators/*": [
+				"./source/decorators/*"
+			],
+			"@primitives/*": [
+				"./source/primitives/*"
+			],
+			"@interfaces/*": [
+				"./source/interfaces/*"
+			],
+			"@services/*": [
+				"./source/services/*"
+			],
+		}
+	},
+	"include": [
+		".next/types/**/*.ts",
+		"next-env.d.ts",
+		"**/*.d.ts",
+		"**/*.tsx",
+		"**/*.ts"
+	],
+	"exclude": [
+		"node_modules",
+		"**/*assert.tsx",
+		"**/*assert.ts"
+	]
+}
